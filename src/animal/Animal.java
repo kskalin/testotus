@@ -56,14 +56,14 @@ public abstract class Animal implements IAnimal {
 
         if (ageLastNumber == 1) {
             yearsOld = "год";
-
-        } else if (ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9) {
+        }
+        else if (ageLastNumber >=5) {
             yearsOld = "лет";
-
-        } else if (ageLastNumber >= 2 && ageLastNumber <= 4) {
+        }
+        else if (ageLastNumber <=4) {
             yearsOld = "года";
         }
-        if (isExclusion == true) {
+        if (isExclusion) {
             yearsOld = "лет";
         }
         return "Привет! Меня зовут " + name +
