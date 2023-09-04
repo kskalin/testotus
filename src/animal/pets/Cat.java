@@ -1,4 +1,7 @@
-package animal;
+package animal.pets;
+
+import animal.Animal;
+
 public class Cat extends Animal {
     public Cat(String name, int age, double weight, String color) {
 

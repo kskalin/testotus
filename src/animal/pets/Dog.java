@@ -1,5 +1,8 @@
-package animal;
-public class Dog extends Animal{
+package animal.pets;
+
+import animal.Animal;
+
+public class Dog extends Animal {
     public Dog(String name, int age, double weight, String color) {
 
         super(name, age, weight, color);

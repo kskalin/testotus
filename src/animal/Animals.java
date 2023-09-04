@@ -1,4 +1,8 @@
 package animal;
+import animal.birds.Duck;
+import animal.pets.Cat;
+import animal.pets.Dog;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -32,22 +36,34 @@ public class Animals {
                     System.out.println("Введите имя животного");
                     String name = scanner.nextLine().trim();
 
-                    System.out.println("Введите возраст животного");
-                    int age = 0;
-                    try {
-                        age = Integer.parseInt(scanner.nextLine());
-                    } catch (NumberFormatException e) {
-                        System.out.println("Неверно указан возраст. Введите еще раз!");
-                        continue;
+                    int age;
+                    while (true) {
+                        try {
+                            System.out.println("Введите возраст животного");
+                            age = Integer.parseInt(scanner.nextLine());
+                            if (age <= 0) {
+                                System.out.println("Неверно указан возраст. Введите еще раз!");
+                            } else {
+                                break;
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Неверно указан возраст. Введите еще раз!");
+                        }
                     }
 
-                    System.out.println("Введите вес животного");
-                    double  weight = 0;
-                    try {
-                        weight = Double.parseDouble(scanner.nextLine());
-                    } catch (NumberFormatException e) {
-                        System.out.println("Неверно указан вес. Введите еще раз!");
-                        continue;
+                    double weight;
+                    while (true) {
+                        try {
+                            System.out.println("Введите вес животного");
+                            weight = Double.parseDouble(scanner.nextLine());
+                            if (weight <= 0) {
+                                System.out.println("Неверно указан вес. Введите еще раз!");
+                            } else {
+                                break;
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Неверно указан вес. Введите еще раз!");
+                        }
                     }
 
                     System.out.println("Введите цвет животного");
